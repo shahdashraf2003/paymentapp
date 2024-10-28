@@ -45,7 +45,7 @@ class MyCartViewBody extends StatelessWidget {
               //   ),
               // );
               showBottomSheet(
-                enableDrag: true,
+                  enableDrag: true,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(16),
                   ),
@@ -77,7 +77,6 @@ class PaymentMethodsBottomSheet extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          
           PaymentMethodsListView(),
           SizedBox(
             height: 32,
