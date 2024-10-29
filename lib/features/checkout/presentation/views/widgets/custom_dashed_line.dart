@@ -25,4 +25,3 @@ class CustomDashedLine extends StatelessWidget {
     );
   }
 }
-

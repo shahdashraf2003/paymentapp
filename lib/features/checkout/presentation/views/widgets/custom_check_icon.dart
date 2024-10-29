@@ -22,4 +22,3 @@ class CustomCheckIcon extends StatelessWidget {
     );
   }
 }
-
