@@ -44,7 +44,7 @@ class PaymentIntentModel {
   dynamic transferData;
   dynamic transferGroup;
 
-  PaymentIntentModel({
+   PaymentIntentModel ({
     this.id,
     this.object,
     this.amount,
