@@ -9,8 +9,8 @@ class PaymentMethodsBottomSheet extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Padding(
       padding: EdgeInsets.only(
-        left: 32,
-        right: 32,
+        left: 8,
+        right: 8,
         top: 32,
         bottom: 16,
       ),
@@ -27,5 +27,3 @@ class PaymentMethodsBottomSheet extends StatelessWidget {
     );
   }
 }
-
-
