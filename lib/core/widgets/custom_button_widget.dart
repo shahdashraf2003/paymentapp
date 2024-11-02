@@ -4,10 +4,12 @@ import 'package:payment_app/core/utils/styles.dart';
 class CustomButton extends StatelessWidget {
   final Function()? onTap;
   final String title;
+  final bool isLoading;
   const CustomButton({
     super.key,
     this.onTap,
     required this.title,
+    this.isLoading = false,
   });
 
   @override
@@ -23,12 +25,17 @@ class CustomButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(15),
           ),
         ),
-        child: Center(
-          child: Text(
-            title,
-            style: Styles.style22,
-          ),
-        ),
+        child: isLoading
+            ? const Center(
+                child: CircularProgressIndicator(
+                color: Colors.white,
+              ))
+            : Center(
+                child: Text(
+                  title,
+                  style: Styles.style22,
+                ),
+              ),
       ),
     );
   }
