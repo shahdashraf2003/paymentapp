@@ -24,22 +24,24 @@ class CustomButtonBlocConsumer extends StatelessWidget {
             backgroundColor: Colors.red,
           );
           ScaffoldMessenger.of(context).showSnackBar(
-           snackBar,
+            snackBar,
           );
         }
       },
       builder: (context, state) {
-        return  CustomButton(
-          onTap: () {
-            PaymentIntentInputModel paymentIntentInputModel = PaymentIntentInputModel(
-              amount: '1000',
-              currency: 'usd',
-              
-            );
-            BlocProvider.of<StripePaymentCubit>(context).makePayment(paymentIntentInputModel: paymentIntentInputModel);
-          },
-          isLoading: state is StripePaymentLoading ? true : false,
-          title: 'Continue');
+        return CustomButton(
+            onTap: () {
+              PaymentIntentInputModel paymentIntentInputModel =
+                  PaymentIntentInputModel(
+                
+                amount: '1000',
+                currency: 'usd',
+              );
+              BlocProvider.of<StripePaymentCubit>(context).makePayment(
+                  paymentIntentInputModel: paymentIntentInputModel);
+            },
+            isLoading: state is StripePaymentLoading ? true : false,
+            title: 'Continue');
       },
     );
   }
