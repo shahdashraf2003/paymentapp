@@ -55,7 +55,8 @@ class MyCartViewBody extends StatelessWidget {
                   context: context,
                   builder: (context) {
                     return BlocProvider(
-                      create: (context) => StripePaymentCubit(CheckoutRepoImpl()),
+                      create: (context) =>
+                          StripePaymentCubit(CheckoutRepoImpl()),
                       child: const PaymentMethodsBottomSheet(),
                     );
                   });

@@ -9,7 +9,8 @@ part 'stripe_payment_state.dart';
 class StripePaymentCubit extends Cubit<StripePaymentState> {
   StripePaymentCubit(this.checkoutRepo) : super(StripePaymentInitial());
   final CheckoutRepo checkoutRepo;
-  Future  makePayment({required PaymentIntentInputModel paymentIntentInputModel}) async {
+  Future makePayment(
+      {required PaymentIntentInputModel paymentIntentInputModel}) async {
     emit(StripePaymentLoading());
     var data = await checkoutRepo.makePayment(
         paymentIntentInputModel: paymentIntentInputModel);
@@ -18,6 +19,7 @@ class StripePaymentCubit extends Cubit<StripePaymentState> {
       (r) => emit(StripePaymentSuccess()),
     );
   }
+
   @override
   void onChange(Change<StripePaymentState> change) {
     log(change.toString());
