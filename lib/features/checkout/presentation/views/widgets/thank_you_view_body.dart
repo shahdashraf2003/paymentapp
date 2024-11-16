@@ -15,32 +15,30 @@ class ThankYouViewBody extends StatelessWidget {
         children: [
           const ThankYouCard(),
           Positioned(
-            bottom: MediaQuery.sizeOf(context).height * 0.2,
+            bottom: MediaQuery.sizeOf(context).height * 0.24,
             left: -20,
             child: const CircleAvatar(
               backgroundColor: Colors.white,
             ),
           ),
           Positioned(
-            bottom: MediaQuery.sizeOf(context).height * .2 + 20,
+            bottom: MediaQuery.sizeOf(context).height * .24 + 20,
             right: 20 + 8,
             left: 20 + 8,
             child: const CustomDashedLine(),
           ),
-
           Positioned(
-            bottom: MediaQuery.sizeOf(context).height * 0.2,
+            bottom: MediaQuery.sizeOf(context).height * 0.24,
             right: -20,
             child: const CircleAvatar(
               backgroundColor: Colors.white,
             ),
           ),
-          // ignore: prefer_const_constructors
-          Positioned(
+          const Positioned(
             top: -50,
             right: 0,
             left: 0,
-            child: const CustomCheckIcon(),
+            child: CustomCheckIcon(),
           )
         ],
       ),

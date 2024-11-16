@@ -65,39 +65,39 @@ class ThankYouCard extends StatelessWidget {
               thickness: 2,
             ),
             const TotalPrice(title: 'Total', value: '\$50.97'),
-            const SizedBox(
-              height: 30,
-            ),
-            const CardInfoWidget(),
             const Spacer(),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                const Icon(FontAwesomeIcons.barcode, size: 64),
-                Container(
-                  width: 113,
-                  height: 58,
-                  decoration: ShapeDecoration(
-                    shape: RoundedRectangleBorder(
-                      side: const BorderSide(
-                          width: 1.50, color: Color(0xFF34A853)),
-                      borderRadius: BorderRadius.circular(15),
+            const CardInfoWidget(),
+            Padding(
+              padding: const EdgeInsets.only(top: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Icon(FontAwesomeIcons.barcode, size: 64),
+                  Container(
+                    width: 113,
+                    height: 58,
+                    decoration: ShapeDecoration(
+                      shape: RoundedRectangleBorder(
+                        side: const BorderSide(
+                            width: 1.50, color: Color(0xFF34A853)),
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                    ),
+                    child: Center(
+                      child: Text(
+                        'PAID',
+                        textAlign: TextAlign.center,
+                        style: Styles.style24
+                            .copyWith(color: const Color(0xff34A853)),
+                      ),
                     ),
                   ),
-                  child: Center(
-                    child: Text(
-                      'PAID',
-                      textAlign: TextAlign.center,
-                      style: Styles.style24
-                          .copyWith(color: const Color(0xff34A853)),
-                    ),
-                  ),
-                ),
-              ],
+                ],
+              ),
             ),
             SizedBox(
               height:
-                  ((MediaQuery.of(context).size.height * 0.2 + 20) / 2) - 29,
+                  ((MediaQuery.of(context).size.height * 0.2 + 20) / 2) - 60,
             )
           ],
         ),
