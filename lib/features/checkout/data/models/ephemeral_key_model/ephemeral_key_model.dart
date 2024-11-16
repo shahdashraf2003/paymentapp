@@ -19,7 +19,7 @@ class EphemeralKeyModel {
     this.secret,
   });
 
-  factory EphemeralKeyModel.fromIdEphkey1QLoeSllv2zZuYwqQpSbnbCqObjectEphemeralKeyAssociatedObjectsIdCusReh5JrSlv87CjlTypeCustomerCreated1731773712Expires1731777312LivemodeFalseSecretEkTestYwNjdF8xUuv4ZnlMtfYyelpVwXdxLDczcmlRodnnr1ZtT2pwNGdtM3VktHk5d2hTy3I0dzg00XiWwjYFn(
+  factory EphemeralKeyModel.fromJson(
       Map<String, dynamic> json) {
     return EphemeralKeyModel(
       id: json['id'] as String?,
