@@ -64,8 +64,8 @@ class StripeService {
       contentType: Headers.formUrlEncodedContentType,
       url: 'https://api.stripe.com/v1/ephemeral_keys',
       headers: {
-        'Authorization': 'Bearer $ApiKeys.secretKey',
-        'Stripe-Version': '2024-09-30.acacia',
+        'Authorization': 'Bearer ${ApiKeys.secretKey}',
+        'Stripe-Version': '2023-08-16',
       },
       token: ApiKeys.secretKey,
     );

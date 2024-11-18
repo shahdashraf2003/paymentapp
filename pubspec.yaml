@@ -39,9 +39,9 @@ dependencies:
   flutter_credit_card: ^4.0.1
   font_awesome_flutter: ^10.7.0
   flutter_stripe: ^11.2.0
-  dio: ^5.7.0
   dartz: ^0.10.1
   flutter_bloc: ^8.1.6
+  dio: ^4.0.0  # Specify the desired version of Dio here.
 
 dev_dependencies:
   flutter_test:
