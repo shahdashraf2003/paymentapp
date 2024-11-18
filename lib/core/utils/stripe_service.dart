@@ -60,18 +60,18 @@ class StripeService {
   Future<EphemeralKeyModel> createEphemeralKey(
       {required String customerId}) async {
     var response = await apiService.post(
-      body: {'customer': customerId},
-      contentType: Headers.formUrlEncodedContentType,
-      url: 'https://api.stripe.com/v1/ephemeral_keys',
-      headers: {
-        'Authorization': 'Bearer ${ApiKeys.secretKey}',
-        'Stripe-Version': '2023-08-16',
-      },
-      token: ApiKeys.secretKey,
-    );
-    var ephemeralKey = EphemeralKeyModel.fromJson(response.data);
+        body: {'customer': customerId},
+        contentType: Headers.formUrlEncodedContentType,
+        url: 'https://api.stripe.com/v1/ephemeral_keys',
+        token: ApiKeys.secretKey,
+        headers: {
+          'Authorization': "Bearer ${ApiKeys.secretKey}",
+          'Stripe-Version': '2023-08-16',
+        });
 
-    return ephemeralKey;
+    var ephermeralKey = EphemeralKeyModel.fromJson(response.data);
+
+    return ephermeralKey;
   }
 }
 
