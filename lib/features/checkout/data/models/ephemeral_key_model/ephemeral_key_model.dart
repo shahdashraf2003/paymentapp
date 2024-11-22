@@ -19,8 +19,7 @@ class EphemeralKeyModel {
     this.secret,
   });
 
-  factory EphemeralKeyModel.fromJson(
-      Map<String, dynamic> json) {
+  factory EphemeralKeyModel.fromJson(Map<String, dynamic> json) {
     return EphemeralKeyModel(
       id: json['id'] as String?,
       object: json['object'] as String?,
