@@ -41,7 +41,8 @@ dependencies:
   flutter_stripe: ^11.2.0
   dartz: ^0.10.1
   flutter_bloc: ^8.1.6
-  dio: ^4.0.0  # Specify the desired version of Dio here.
+  dio: ^5.7.0  # Specify the desired version of Dio here.
+  flutter_paypal_payment: ^1.0.6
 
 dev_dependencies:
   flutter_test:
